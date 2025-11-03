@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Happy Birthday</h1>
+            <h2 class="fade-in-delay">My Beautiful Love</h2>
+            <p class="hero-subtitle fade-in-delay-2">Today we celebrate you and all the joy you bring into my life</p>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+        <div class="floating-hearts">
+            <span class="heart">❤️</span>
+            <span class="heart">💕</span>
+            <span class="heart">💖</span>
+            <span class="heart">💗</span>
+            <span class="heart">💝</span>
+        </div>
+    </section>
+
+    <!-- Love Message Section -->
+    <section class="love-message">
+        <div class="container">
+            <div class="message-card">
+                <h3>To the Most Amazing Person</h3>
+                <p>Every moment with you feels like a beautiful dream. Your smile lights up my darkest days, and your laughter is the sweetest melody I've ever heard.</p>
+            </div>
+            <div class="message-card">
+                <h3>You Are My Everything</h3>
+                <p>In a world full of temporary things, you are my forever. Thank you for being the reason I smile, the reason I believe in love, and the reason my life is so beautiful.</p>
+            </div>
+            <div class="message-card">
+                <h3>Today Is All About You</h3>
+                <p>On this special day, I want you to know how incredibly loved you are. You deserve all the happiness in the world, and I'm so grateful to be the one celebrating you today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery (Wooden board + polaroid collage) -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Moments</h2>
+            <p class="section-subtitle">Every picture tells our story</p>
+
+            <!-- Background clips that play behind the gallery board -->
+            <div class="gallery-bg-videos" aria-hidden="true">
+                <video class="bg-clip active" muted loop playsinline>
+                    <source src="videos/gallery-bg1.mp4" type="video/mp4">
+                </video>
+                <video class="bg-clip" muted loop playsinline>
+                    <source src="videos/gallery-bg2.mp4" type="video/mp4">
+                </video>
+                <video class="bg-clip" muted loop playsinline>
+                    <source src="videos/gallery-bg3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Wooden board and polaroid collage -->
+            <div class="gallery-board">
+                <div class="polaroid rotate-1">
+                    <img src="photos/IMG-20250913-WA0013.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-2">
+                    <img src="photos/VID-20250312.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-3">
+                    <img src="photos/IMG-20250217-WA0044.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-4">
+                    <img src="photos/IMG-20251021-WA0048.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-5">
+                    <img src="photos/IMG-20250821-WA0052.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-6">
+                    <img src="photos/IMG-20250815-WA0007.jpg" alt="Add a photo">
+                </div>
+                <!-- added 4 more polaroids for collage -->
+                <div class="polaroid rotate-2">
+                    <img src="photos/IMG-20251021-WA0001.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-5">
+                    <img src="photos/IMG-20250821-WA0060.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-3">
+                    <img src="photos/IMG-20250819-WA0357.jpg" alt="Add a photo">
+                </div>
+                <div class="polaroid rotate-4">
+                    <img src="photos/VID-20251030.jpg" alt="Add a photo">
+                </div>
+    </section>
+
+    <!-- Personal Letter Section (replaces Reasons) -->
+    <section class="letter-section">
+        <div class="container">
+            <h2 class="section-title">A Letter For You</h2>
+            <p class="section-subtitle">Click the envelope to read a special message</p>
+
+            <div class="envelope-wrap">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                </div>
+
+                <div class="letter" id="letter" role="dialog" aria-hidden="true" aria-labelledby="letterTitle">
+                    <button class="letter-close" aria-label="Close letter">✕</button>
+                    <div class="letter-content" tabindex="0">
+                        <h3>My Dearest Love,</h3>
+                        <p>On this day I celebrate you — your gentle heart, your laugh, and all the small things that make you, you.
+                        I kept this letter on an old page so its words feel timeless, just like the way I feel about you.</p>
+                        <p>Happy Birthday. Forever yours.</p>
+                        <p class="signature">— With all my love</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gift Box Section -->
+    <section class="gift-section">
+        <div class="container">
+            <h2 class="section-title">One Final Surprise</h2>
+            <p class="section-subtitle">Click the ribbons to unwrap your gift!</p>
+            
+            <div class="gift-container">
+                <div class="gift-box" id="giftBox">
+                    <!-- Ribbon Vertical -->
+                    <div class="ribbon ribbon-vertical" id="ribbonVertical"></div>
+                    <!-- Ribbon Horizontal -->
+                    <div class="ribbon ribbon-horizontal" id="ribbonHorizontal"></div>
+                    <!-- Bow -->
+                    <div class="bow" id="bow">
+                        <div class="bow-left"></div>
+                        <div class="bow-right"></div>
+                        <div class="bow-center"></div>
+                    </div>
+                    <!-- Box Body -->
+                    <div class="box-body"></div>
+                    <!-- Hidden Surprise: play card revealed when gift is unwrapped -->
+                    <div class="hidden-photo" id="hiddenPhoto">
+                        <div class="play-card" id="playCard" aria-hidden="true">
+                            <img src="photos/surprise.jpg" alt="Surprise thumbnail" class="play-thumb" id="surpriseThumb">
+                            <button class="play-button" id="playButton" aria-label="Play surprise video">▶</button>
+                            <p class="photo-message">Tap to play your surprise video</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-instructions" id="giftInstructions">
+                    <p>✨ Click each ribbon to reveal your surprise! ✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section class="final-message">
+        <div class="container">
+            <div class="final-card">
+                <h2>Happy Birthday, My Love! 🎂</h2>
+                <p>May this year bring you endless happiness, countless adventures, and all the love your heart can hold. I'm so lucky to celebrate this special day with you.</p>
+                <p class="signature">Forever yours,<br>With all my love ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
